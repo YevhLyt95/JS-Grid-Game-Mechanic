@@ -1,0 +1,42 @@
+body{
+    background-color: #fcfcfc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#board {
+    background-color: #333;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    display: grid;
+    gap: 4px;
+}
+
+.cell {
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.4s, background 0.4s;
+}
+
+.cell:hover {
+    background-color: #ddd;
+    transition: scale(1.08);
+}
+
+.cell.disappear {
+    transform: scale(0);
+    opacity: 0;
+    transition: 0.4s;
+}
