@@ -54,7 +54,9 @@ export class Board {
 
         //here I create queue:
         const q = [[startR, startC]];
+        //pointer instead of shift() to reach O(1) during getting the element from queue
 
+        let qi = 0;
         //object of js class Set for cells algorithm "visited"
 
         const seen = new Set();
@@ -65,9 +67,10 @@ export class Board {
 
         seen.add(`${startR}:${startC}`);
 
-        while (q.length > 0) {
-            const [currR, currC] = q.shift();
-            found.push(this.grid[currR][currC]);
+        while (qi < q.length) {
+            const [currR, currC] = q[qi++]
+            const currentCell = this.grid[currR][currC];
+            found.push(currentCell);
 
             //neighbors' coordinates:
 

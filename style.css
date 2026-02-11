@@ -14,6 +14,11 @@ body{
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     display: grid;
     gap: 4px;
+    max-width: 100vw;
+    max-height: 90vh;
+    overflow: auto;
+    user-select: none;
+    -webkit-user-select: none;
 }
 
 .cell {
