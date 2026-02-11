@@ -7,6 +7,8 @@ Simple iteration through all the grid (iteration by index) lets find all element
     2) Ineffective: such algorithm would check every cell on board
 
 So, I found more effective way - Flood Fill (Breadth-First Search). This algorithm lets think about task in context of graph theory and checks only nearby cells(flows from start point throug all graph vertexes) which is quite suitable for games of such type on my opinion. Also, program would "visit" only group cells, so algorithm complexity depends only on quantity of elements - O(K). Also, my realization of this task is quite flexible (for example, you can easily switch to another coordinates to switch the mechanics of elements destroying).
+--------------------------------------------------------------------------
+I realized that shift() is not the best way in this case, so I replaced it with using queue pointer(I loop through array, using qi index, which helps getting elememts for O(1)).
 
 ---------------------------------------------------------------------------
 
